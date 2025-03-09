@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Получаем параметр из URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const site = urlParams.get('site'); // Параметр 'site'
+
+        // Устанавливаем редирект на основе параметра
+        let redirectUrl = '';
+
+        switch (site) {
+            case 'site1':
+                redirectUrl = 'https://site1.com';  // Укажи нужный URL
+                break;
+            case 'site2':
+                redirectUrl = 'https://site2.com';  // Укажи нужный URL
+                break;
+            case 'site3':
+                redirectUrl = 'https://site3.com';  // Укажи нужный URL
+                break;
+            default:
+                redirectUrl = 'https://defaultsite.com';  // Сайт по умолчанию
+                break;
+        }
+
+        // Мгновенно выполняем редирект
+        window.location.replace(redirectUrl);
+    </script>
+</head>
+<body>
+    <p>Перенаправляем вас...</p>
+</body>
+</html>
